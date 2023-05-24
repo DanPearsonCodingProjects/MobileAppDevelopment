@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".Main_Theatre">
+
+    <include layout="@layout/bottom_nav_main"/>
+
+    <ImageView
+        android:id="@+id/imgtxt"
+        android:layout_width="395dp"
+        android:layout_height="277dp"
+        android:layout_marginBottom="2dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:background="@drawable/constraint_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/datetxt"
+            android:layout_width="67dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/date_time_border"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="16 Jun"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/timetxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titletxt" />
+
+        <TextView
+            android:id="@+id/timetxt"
+            android:layout_width="67dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/date_time_border"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="20:00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/datetxt"
+            app:layout_constraintTop_toBottomOf="@+id/titletxt" />
+
+        <TextView
+            android:id="@+id/titletxt"
+            android:layout_width="406dp"
+            android:layout_height="72dp"
+            android:background="@drawable/top_border"
+            android:gravity="center"
+            android:text="The Merchant of Venice"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="67dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="76dp"
+            android:text="DATE"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/datetxt"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="67dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="76dp"
+            android:text="TIME"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/timetxt"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="390dp"
+            android:text="SELECT TICKET NUMBER"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/numTickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="194dp"
+            android:text="1"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/pink"
+            android:onClick="subtract"
+            android:text="-"
+            app:layout_constraintEnd_toStartOf="@+id/numTickets"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="@color/pink"
+            android:onClick="add"
+            android:text="+"
+            app:layout_constraintStart_toEndOf="@+id/numTickets"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/buyBtn"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#AA288E"
+            android:onClick="send"
+            android:text="SELECT TICKETS"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SELECT SEATING TYPE"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numTickets" />
+
+        <Spinner
+            android:id="@+id/spinnerID1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+        <CheckBox
+            android:id="@+id/wheelChair"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="60dp"
+            android:text="Wheelchair Access Needed?"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/wheelchairTXT"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <CheckBox
+            android:id="@+id/Epilepsy"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Epileptic?"
+            app:layout_constraintStart_toStartOf="@+id/wheelChair"
+            app:layout_constraintTop_toBottomOf="@+id/wheelChair" />
+
+        <TextView
+            android:id="@+id/wheelchairTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="NO WHEELCHAIR ACCESS"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/spinnerID1"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerID1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:srcCompat="@drawable/baseline_location_on_24" />
+
+        <TextView
+            android:id="@+id/locationTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="7dp"
+            android:text="LOCATION"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/imageView2" />
+
+        <CheckBox
+            android:id="@+id/bloodSplatter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agree to blood splatter?"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/Epilepsy"
+            app:layout_constraintTop_toBottomOf="@+id/Epilepsy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
