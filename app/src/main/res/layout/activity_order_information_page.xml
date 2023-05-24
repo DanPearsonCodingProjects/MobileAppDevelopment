@@ -12,7 +12,7 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="80dp"
         android:onClick="cancelTicket"
         android:text="CANCEL BOOKING"
         android:textSize="24sp"
@@ -25,31 +25,32 @@
         android:id="@+id/uniqueCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="10dp"
         android:text="M5GNS42"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
         android:text="UNIQUE CODE(SHOW AT DOOR)"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/uniqueCode"
-        app:layout_constraintEnd_toEndOf="@+id/uniqueCode"
-        app:layout_constraintStart_toStartOf="@+id/uniqueCode" />
+        app:layout_constraintEnd_toEndOf="@+id/ticketPriceBooked"
+        app:layout_constraintStart_toStartOf="@+id/ticketPriceBooked"
+        app:layout_constraintTop_toBottomOf="@+id/ticketPriceBooked" />
 
     <TextView
         android:id="@+id/namePlay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:text="MERCHANT OF VENICE"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -61,6 +62,7 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:text="Seat Type Booked"
         android:textSize="20sp"
@@ -72,9 +74,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
         android:text="Quantity"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/namePlay"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namePlay" />
 
     <TextView
@@ -103,10 +106,10 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
         android:layout_marginTop="175dp"
         android:text="Price of Tickets"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/namePlay"
         app:layout_constraintTop_toBottomOf="@+id/namePlay" />
 
