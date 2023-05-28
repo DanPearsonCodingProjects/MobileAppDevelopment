@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         cheapestbtn = findViewById(R.id.cheapeast_button);
 
 
-        searchView = findViewById(R.id.search);
+        //searchView = findViewById(R.id.search);
 
         dbConnector db = new dbConnector(this);
 
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+    /*
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -123,7 +123,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+     */
+
     }
+
 
 
     private void filter(String newText) {
